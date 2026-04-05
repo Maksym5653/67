@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <com.mwai.overlay.MatrixRainView
+        android:id="@+id/matrix_bg"
+        android:layout_width="match_parent" android:layout_height="match_parent"/>
+
+    <!-- Header -->
+    <LinearLayout android:id="@+id/header_bar"
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingStart="20dp" android:paddingEnd="16dp"
+        android:background="@drawable/bg_header_bar">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="MW_AI"
+            android:textColor="@color/accent_red" android:textSize="20sp"
+            android:textStyle="bold" android:fontFamily="monospace"/>
+        <TextView android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="12sp" android:fontFamily="monospace"
+            android:maxLines="1" android:ellipsize="end"/>
+    </LinearLayout>
+
+    <!-- Fragment container -->
+    <FrameLayout android:id="@+id/fragment_container"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_below="@id/header_bar"
+        android:layout_above="@id/bottom_nav"/>
+
+    <!-- Bottom nav -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_nav"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+</RelativeLayout>

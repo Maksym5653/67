@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Dev header -->
+        <LinearLayout android:id="@+id/card_dev_header"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_green" android:padding="16dp"
+            android:orientation="vertical" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="⚡ DEVELOPER MODE // ROOT ACCESS"
+                android:textColor="#00FF00" android:textSize="14sp"
+                android:textStyle="bold" android:fontFamily="monospace"
+                android:layout_marginBottom="6dp"/>
+            <TextView android:id="@+id/tv_dev_stats"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="#00CC00" android:textSize="12sp"
+                android:fontFamily="monospace" android:lineSpacingMultiplier="1.5"/>
+        </LinearLayout>
+
+        <!-- Users log -->
+        <LinearLayout android:id="@+id/card_users"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:padding="16dp"
+            android:orientation="vertical" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="// ЛОГ КОРИСТУВАЧІВ" android:textColor="@color/accent_red"
+                android:textSize="11sp" android:fontFamily="monospace"
+                android:layout_marginBottom="10dp"/>
+            <TextView android:id="@+id/tv_users_log"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textColor="#00EE00" android:textSize="12sp"
+                android:fontFamily="monospace" android:lineSpacingMultiplier="1.6"
+                android:background="#0A001A00" android:padding="10dp"/>
+        </LinearLayout>
+
+        <!-- Actions -->
+        <LinearLayout android:id="@+id/card_dev_actions"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card" android:padding="16dp"
+            android:orientation="vertical" android:layout_marginBottom="16dp">
+            <Button android:id="@+id/btn_clear_log"
+                android:layout_width="match_parent" android:layout_height="44dp"
+                android:text="[ ОЧИСТИТИ ЛОГ ]"
+                android:background="@drawable/bg_btn_danger"
+                android:textColor="@color/accent_red" android:textSize="13sp"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
